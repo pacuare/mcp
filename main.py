@@ -1,11 +1,11 @@
+import asyncio
 import os
 import sys
 from typing import Any
-import asyncio
 
 from mcp.server import Server
-from mcp.types import Tool, TextContent
 from mcp.server.stdio import stdio_server
+from mcp.types import TextContent, Tool
 from pacuare import Client
 
 
@@ -34,6 +34,9 @@ class PacuareMCPServer:
                     "Execute SQL queries against the Pacuare database. "
                     "This tool can be used for data retrieval, aggregations, and mathematical calculations. "
                     "For math operations, convert them to SQL queries (e.g., 'SELECT 5 + 3 AS result' for addition). "
+                    "This is a PostgreSQL database. Use examples from https://pacuare.dev/en/latest/useful-queries.html to help write queries. "
+                    "Most data is in the `pacuare_raw` table. "
+                    "Avoid writing data if at all possible. "
                     "Returns results as a formatted table."
                 ),
                 inputSchema={
@@ -41,7 +44,11 @@ class PacuareMCPServer:
                     "properties": {
                         "sql": {
                             "type": "string",
-                            "description": "SQL query to execute. Use standard SQL syntax. For math, use SELECT statements with arithmetic operators."
+                            "description": (
+                                "SQL query to execute. Use standard SQL syntax. For math, use SELECT statements with arithmetic operators. "
+                                "This is a PostgreSQL database. Use examples from https://pacuare.dev/en/latest/useful-queries.html to help write queries. "
+                                "Avoid writing data if at all possible."
+                            )
                         },
                         "params": {
                             "type": "array",
