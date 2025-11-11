@@ -14,13 +14,7 @@ An MCP (Model Context Protocol) server that provides access to the Pacuare datab
 Install the required dependencies using uv or pip:
 
 ```bash
-uv pip install -e .
-```
-
-Or with pip:
-
-```bash
-pip install -e .
+uv sync
 ```
 
 ## Configuration
