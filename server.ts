@@ -28,7 +28,7 @@ server.registerTool(
   },
   async ({ sql, params }, { requestInfo }) => {
     try {
-      const output = { result: await new Client((requestInfo ?? console.log('no request info'))?.headers['x-api-key'] as string ?? process.env.PACUARE_API_KEY ?? "").query(sql, params) };
+      const output = { result: await new Client(process.env.PACUARE_API_KEY!).query(sql, params) };
       return {
         content: [{ type: 'text', text: JSON.stringify(output) }],
         structuredContent: output

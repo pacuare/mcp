@@ -4,17 +4,13 @@
   "type": "module",
   "private": true,
   "devDependencies": {
-    "@types/bun": "latest",
-    "@types/express": "^5.0.5",
-    "@types/morgan": "^1.9.10"
+    "@types/bun": "latest"
   },
   "peerDependencies": {
     "typescript": "^5"
   },
   "dependencies": {
     "@modelcontextprotocol/sdk": "^1.21.1",
-    "@pacuare/sdk": "npm:@jsr/pacuare__sdk",
-    "express": "^5.1.0",
-    "morgan": "^1.10.1"
+    "@pacuare/sdk": "npm:@jsr/pacuare__sdk"
   }
 }

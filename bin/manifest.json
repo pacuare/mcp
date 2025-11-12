@@ -1,0 +1,42 @@
+{
+  "manifest_version": "0.2",
+  "name": "pacuare-mcp",
+  "display_name": "Pacuare Reserve",
+  "version": "1.0.0",
+  "description": "An MCP server for the Pacuare dataset.",
+  "author": {
+    "name": "Aleks Rutins",
+    "email": "support@farthergate.com",
+    "url": "https://farthergate.com"
+  },
+  "homepage": "https://pacuare.dev",
+  "server": {
+    "type": "binary",
+    "entry_point": "pacuare-mcp",
+    "mcp_config": {
+      "command": "${__dirname}/pacuare-mcp",
+      "args": [],
+      "env": {
+        "PACUARE_API_KEY": "${user_config.api_key}"
+      }
+    }
+  },
+  "tools": [
+    {
+      "name": "Query Database",
+      "description": "Execute SQL queries against the Pacuare database."
+    }
+  ],
+  "keywords": [
+    "data"
+  ],
+  "user_config": {
+    "api_key": {
+      "type": "string",
+      "title": "API Key",
+      "description": "The API key to pass to the Pacuare API, generated on app.pacuare.dev.",
+      "required": true
+    }
+  },
+  "license": "MIT"
+}
