@@ -1,48 +1,35 @@
-# Python-generated files
-__pycache__/
-*.py[oc]
-*.py[cod]
-*$py.class
-*.so
-.Python
-build/
-dist/
-wheels/
-*.egg-info
-develop-eggs/
-downloads/
-eggs/
-.eggs/
-lib/
-lib64/
-parts/
-sdist/
-var/
-.installed.cfg
-*.egg
+# dependencies (bun install)
+node_modules
 
-# Virtual environments
-.venv
-venv/
-env/
-ENV/
+# output
+out
+dist
+*.tgz
 
-# IDE
-.vscode/
-.idea/
-*.swp
-*.swo
-*~
+# code coverage
+coverage
+*.lcov
 
-# Environment variables
+# logs
+logs
+_.log
+report.[0-9]_.[0-9]_.[0-9]_.[0-9]_.json
+
+# dotenv environment variable files
 .env
+.env.development.local
+.env.test.local
+.env.production.local
 .env.local
 
-# Testing
-.pytest_cache/
-.coverage
-htmlcov/
+# caches
+.eslintcache
+.cache
+*.tsbuildinfo
 
-# OS
+# IntelliJ based IDEs
+.idea
+
+# Finder (MacOS) folder config
 .DS_Store
-Thumbs.db
+pacuare-mcp
